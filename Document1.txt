@@ -1,0 +1,17 @@
+<?php
+
+
+
+$result3 = mysql_query("SELECT max(reservation_id) FROM reservation");
+
+while($row = mysql_fetch_array($result3))
+  {
+  $reservationid=$row['reservation_id'];
+  }
+$result4 = mysql_query("SELECT no_room FROM reservation WHERE reservation_id='".$reservationid."'");
+
+while($row = mysql_fetch_array($result4))
+  {
+  $noroom=$row['no_room'];
+  }
+?>
